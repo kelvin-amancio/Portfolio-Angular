@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+$background-body: hsl(228,15%,20%);
+$font:'Bebas Neue', sans-serif;
+
+@import "../node_modules/remixicon/fonts/remixicon.css";
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: $font;
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: $background-body;
+}

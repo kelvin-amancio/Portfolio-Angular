@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import { TelainicialComponent } from './telainicial.component';
 
 const routes: Routes = [
   {
     path:'',
-    loadChildren: () => import('./Components/telainicial/index.module').then( m => m.IndexModule)
+    component:TelainicialComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class IndexRoutingModule { }
