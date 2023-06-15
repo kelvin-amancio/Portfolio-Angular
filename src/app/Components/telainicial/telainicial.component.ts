@@ -10,11 +10,29 @@ export class TelainicialComponent implements OnInit {
 
   TextDigitalizer:string='';
 
-  constructor(){}
+  constructor(){
+    window.addEventListener('scroll',()=>{
+      this.Menu();
+
+    })
+  }
 
   ngOnInit(): void {
     this.TypedText();
+  }
 
+  Menu(){
+    var home = document.querySelectorAll('[data-button]');
+    const windowTop = window.pageYOffset + (window.innerHeight * 3) / 4;
+
+    home.forEach((element:any)=>{
+      var btn = document.getElementById('btnUp') as HTMLElement;
+        if((windowTop) > element.offsetTop){
+          btn.style.display = 'block';
+        }else{
+          btn.style.display = 'none';
+        }
+    })
   }
 
   MenuHidden() {
@@ -43,7 +61,6 @@ export class TelainicialComponent implements OnInit {
 
    btnReset(){
     var btn = document.getElementById('btnUp')  as HTMLElement;
-    console.log('chegou')
     if(document.documentElement.scrollTop >90){
       btn.style.display = "block";
       window.scrollTo(0, 0);
@@ -52,8 +69,8 @@ export class TelainicialComponent implements OnInit {
 
   TypedText(){
     var id = document.getElementById('fsd') as HTMLElement;
+   }
 
 
-}
 
 }

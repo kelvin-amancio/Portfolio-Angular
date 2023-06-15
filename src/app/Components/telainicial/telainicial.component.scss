@@ -70,7 +70,7 @@ nav{
     gap: 32px;
 }
 
-ul{
+li{ list-style-type: none;
     .navText{
     color: $text-body;
     padding: 2rem;
@@ -296,12 +296,12 @@ input:focus, input:active, textarea:active,textarea:focus{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 
 #btnUp{
-
+  display: none;
   cursor: pointer;
   position: fixed;
   right: -100px;

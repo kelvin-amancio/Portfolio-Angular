@@ -3,11 +3,11 @@
     <div class="bar menu" ><i class="ri-menu-line" id="bar" (click)="MenuHidden()"></i></div>
     <div class="bar menu" ><i class="ri-close-line" id="barclose" (click)="MenuHidden()"></i></div>
     <div class="nav-content">
-     <li class="NavLi" id="menu">
-          <ul class="navText"><a href="#home">Home</a></ul>
-          <ul class="navText"><a href="#about">About</a></ul>
-          <ul class="navText"><a href="#contact">Contact</a></ul>
-      </li>
+     <ul class="NavLi" id="menu">
+          <li class="navText"><a href="#home">Home</a></li>
+          <li class="navText"><a href="#about">About</a></li>
+          <li class="navText"><a href="#contact">Contact</a></li>
+     </ul>
     </div>
   </nav>
 
@@ -37,7 +37,7 @@
 
 </section>
 
-<section class="CardContent" id="about" (onmousewheel)="btnReset()">
+<section class="CardContent" data-button="left" (onmousewheel)="btnReset()">
   <div class="card-flex">
   <div class="card" id="card1">
       <h3>Front-End</h3>
